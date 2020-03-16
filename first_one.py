@@ -202,3 +202,33 @@ for i in homes:
         if i == j :
             output +=1
 print(output)
+
+# A. Buy a Shovel
+k,r = input().split()
+k = int(k)
+r = int(r)
+output = 0
+while (k * output) % 10 != r:
+    output +=1
+    if (k * output) % 10 == 0:
+        break
+print(output)
+
+# Is your horseshoe on the other hoof ?
+import collections
+n = input().split()
+print(4 - len(collections.Counter(n).keys()))
+# another solution
+n = input().split()
+print(len(n) - len(set(list(n))))
+
+# Colorful Stones (Simplified Edition)
+n = input()
+s = input()
+output = 1
+k = 0
+for i in s:
+    if i == n[k]:
+        output += 1
+        k += 1
+print(output)
