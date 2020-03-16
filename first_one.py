@@ -1,3 +1,4 @@
+# Vanya and Fence
 first_line,second_line = input().split()
 first_line = int(first_line)
 second_line = int(second_line)
@@ -17,6 +18,7 @@ for i in i_height:
 
 print(min_width_of_the_road)
 
+# Anton and Danik
 first_line=input()
 second_line = input()
 Anton_win = second_line.count('A')
@@ -29,7 +31,7 @@ elif Anton_win < Danik_win:
 else:
     print("Friendship")
 
-
+# Bear and Big Brother
 limak,bob = input().split()
 limak = int(limak)
 bob = int(bob)
@@ -44,9 +46,8 @@ while limak <= bob:
 
 print(i)
 
-
+# Team
 first_line = int(input())
-
 max_num = 0
 for i in range(first_line):
    t = input().split()
@@ -55,7 +56,7 @@ for i in range(first_line):
 
 print(max_num)
 
-
+# Beautiful Matrix
 first_line = input().split()
 second_line = input().split()
 third_line = input().split()
@@ -82,7 +83,7 @@ for i in range(0, 5):
                 max_moves += 1
 print(max_moves)
 
-
+# Sereja and Dima
 n = int(input())
 s = input().split()
 s = list(map(int, s))
@@ -106,7 +107,7 @@ while (len(s)-1 >=0):
 print(Sereja)
 print(Dima)
 
-
+# Police Recruits
 n = int(input())
 s = input().split()
 s = list(map(int, s))
@@ -124,6 +125,7 @@ for i in s :
 
 print(crimes)
 
+# Black Square
 calories = 0
 a1,a2,a3,a4 = input().split()
 a1 = int(a1)
@@ -142,6 +144,7 @@ for i in s :
         calories += a4
 print(calories)
 
+# Night at the Museum (first)
 import string
 
 chars = string.ascii_lowercase
@@ -165,7 +168,7 @@ for i in list_of_chars:
 print(max_moves)
 
 
-
+# Night at the Museum (second)
 word = str(input())
 max_moves = 0
 position = 0
@@ -182,5 +185,20 @@ for i in range(len(word)):
 
 print(max_moves)
 
-
-
+# A - Games
+n = int(input())
+teams = []
+output = 0
+homes = []
+aways = []
+for i in range(n):
+    teams.append(input())
+for i in teams:
+    home, away = i.split()
+    homes.append(home)
+    aways.append(away)
+for i in homes:
+    for j in aways:
+        if i == j :
+            output +=1
+print(output)
