@@ -247,4 +247,28 @@ elif(Fraction(A,B) == 0):
     print("0/1")
 else:
     print(Fraction(A,B))
+    
+# A. Shaass and Oskols
+
+wires = list(map(int, input().split()))
+birds_on_wires = list(map(int, input().split()))
+no_of_shots = int(input())
+o = []
+
+for i in range(no_of_shots):
+    o.append(list(map(int, input().split())))
+
+for i in o:
+    if i[0]-1 == 0 and len(birds_on_wires)-1 == 0:
+        birds_on_wires[i[0] - 1] = 0
+    elif i[0] - 1 == 0:
+        birds_on_wires[i[0]] += birds_on_wires[i[0] - 1] - i[1]
+    elif i[0] - 1 == len(birds_on_wires) - 1:
+        birds_on_wires[i[0] - 2] += i[1] - 1
+    else:
+        birds_on_wires[i[0] - 2] += i[1] - 1
+        birds_on_wires[i[0]] += birds_on_wires[i[0] - 1] - i[1]
+    birds_on_wires[i[0] - 1] = 0
+for i in birds_on_wires:
+    print(i)
 
