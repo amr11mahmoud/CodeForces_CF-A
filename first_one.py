@@ -232,3 +232,19 @@ for i in s:
         output += 1
         k += 1
 print(output)
+
+# A. Die Roll
+
+import collections
+from fractions import Fraction
+n = input().split()
+n = list(map(int, n))
+A = 6 - max(collections.Counter(n).keys())+1
+B = 6
+if(Fraction(A,B) == 1):
+    print("1/1")
+elif(Fraction(A,B) == 0):
+    print("0/1")
+else:
+    print(Fraction(A,B))
+
