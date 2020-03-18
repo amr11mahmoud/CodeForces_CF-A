@@ -272,3 +272,34 @@ for i in o:
 for i in birds_on_wires:
     print(i)
 
+
+#  A. Juicer
+n,b,d = input().split()
+d = int(d)
+juicer = 0
+size_of_oranges = list(map(int,input().split()))
+output = 0
+collect_waste = 0
+for i in size_of_oranges:
+    if i <= int(b):
+        juicer += i
+        collect_waste += i
+        if collect_waste > d:
+            output += 1
+            collect_waste = 0
+print(output)
+
+
+# A. Carrot Cakes
+input_ = list(map(int, input().split()))
+n = input_[0]
+t = input_[1]
+k = input_[2]
+d = input_[3]
+counter = int((n+k-1)/k)
+now = d/t
+counter -= now
+if counter <= 1:
+    print("NO")
+else:
+    print("YES")
